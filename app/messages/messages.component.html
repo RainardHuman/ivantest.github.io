@@ -1,0 +1,17 @@
+<mat-toolbar
+  ><span>{{ this.userInfoService.otherUserDisplayName }}</span></mat-toolbar
+>
+<div class="message">
+  <div *ngFor="let message of tempMessageList">
+    <app-message-card
+      [ownProfileURL]="this.userInfoService.currentUserProfilePicture"
+      [ownDisplayName]="this.userInfoService.currentUserDisplayName"
+      [otherDisplayName]="this.userInfoService.otherUserDisplayName"
+      [otherProfileURL]="this.userInfoService.otherUserProfilePicture"
+      [message]="message.message"
+      [currentUser]="currentUser"
+      [senderUserID]="message.userID"
+    >
+    </app-message-card>
+  </div>
+</div>

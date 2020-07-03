@@ -1,0 +1,13 @@
+<mat-toolbar><span>Conversations</span></mat-toolbar>
+<mat-selection-list #chat [multiple]="false" (click)="setConversation(chat.selectedOptions.selected[0]?.value._id,chat.selectedOptions.selected[0]?.value.participants)">
+  <mat-list-option *ngFor="let conversation of conversations" [value]="conversation">
+    <app-chat-card
+      [currentUser]=currentUser
+      [lastMessage]= conversation.lastSentMessage
+      [isGroupChat]=conversation.isGroupChat
+      [users]=conversation.participants
+    >
+    </app-chat-card>
+    <mat-divider></mat-divider>
+  </mat-list-option>
+</mat-selection-list>

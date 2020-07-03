@@ -1,0 +1,7 @@
+mat-toolbar {
+  background-color: #5dade2;
+}
+.message {
+  overflow-y: scroll;
+  max-height: 88%;
+}

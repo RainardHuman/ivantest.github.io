@@ -1,0 +1,45 @@
+<body>
+  <div class="messenger-container">
+    <mat-toolbar color="primary">
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Messenger - TradeBRICS</span>
+      <span class="example-spacer"></span>
+      <mat-form-field class="example-full-width">
+        <input matInput value="User-ID" [(ngModel)]="currentUser" />
+      </mat-form-field>
+      <button
+        mat-icon-button
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon"
+        (click)="setCurrentUser()"
+      >
+        <mat-icon>login</mat-icon>
+      </button>
+    </mat-toolbar>
+    <div class="conversations">
+      <app-chats [currentUser]="currentUser"> </app-chats>
+    </div>
+    <div class="messages">
+      <app-messages
+        [currentConversation]="currentConversation"
+        [currentUser]="this.currentUser"
+      >
+      </app-messages>
+    </div>
+    <div class="chatbox">
+      <div class="chatinput">
+        <mat-form-field class="input">
+          <input matInput placeholder="Message..." />
+        </mat-form-field>
+        <a>&nbsp;&nbsp;&nbsp;</a>
+        <button mat-raised-button color="primary">Send</button>
+      </div>
+    </div>
+  </div>
+</body>

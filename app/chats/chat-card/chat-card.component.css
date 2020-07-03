@@ -1,0 +1,23 @@
+.left {
+  position: absolute;
+  top: 0;
+  width: 20%;
+  bottom: 0;
+  left: 3%;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  width: 70%;
+  bottom: 0;
+  right: 0;
+}
+
+img {
+width:40%;
+}
+.text {
+  display: block;
+  box-sizing: border-box;
+}
